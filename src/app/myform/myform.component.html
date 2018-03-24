@@ -1,9 +1,14 @@
 <div class="form-group">
-  <label for="txtId" class="control-label">Id Juego</label>
-  <input type="text" class="form-control" id="txtId">
+  <div class="form-group">
+    <label for="txtId" class="control-label">Id Juego</label>
+    <input type="text" class="form-control" id="txtId" #idJuegoInput>
+  </div>
+  <div class="form-group">
+    <label for="txtNombre" class="control-label">Nombre Juego</label>
+    <input type="text" class="form-control" id="txtNombre" #nombreJuegoInput>
+  </div>
+  <button class="btn btn-primary pull-right"
+          (click)="agregarJuego(idJuegoInput,nombreJuegoInput)">
+    Agregar
+  </button>
 </div>
-<div class="form-group">
-  <label for="txtNombre" class="control-label">Nombre Juego</label>
-  <input type="text" class="form-control" id="txtNombre">
-</div>
-<button class="btn btn-primary pull-right">Agregar</button>

@@ -2,7 +2,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <app-myform></app-myform>
+      <app-myform (juegoCreado)="juegoAgregado($event)"></app-myform>
     </div>
     <div class="col-md-6">
       <app-mydata *ngFor="let element of juegos" [game]="element" nombre_usuario="Armando"></app-mydata>

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {isNumber, log} from 'util';
+import {isNumeric} from "tslint";
 
 @Component({
   selector: 'app-myform',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyformComponent implements OnInit {
 
+  @Output() juegoCreado = new EventEmitter<{id_juego: number, nombre_juego: string}>();
   constructor() { }
 
   ngOnInit() {
+  }
+
+  agregarJuego (idCapturado: HTMLInputElement, nombreCapturado: HTMLInputElement) {
+    this.juegoCreado.emit({
+      id_juego: Number(idCapturado.value),
+      nombre_juego: nombreCapturado.value
+    });
   }
 
 }
