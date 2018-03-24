@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-mydata',
@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MydataComponent implements OnInit {
 
+  @Input() nombre_usuario = '';
+
+  @Input() game: {id: number, nombre_juego: string};
   constructor() { }
 
   ngOnInit() {

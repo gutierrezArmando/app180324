@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MyformComponent } from './myform/myform.component';
 import { HeaderComponent } from './header/header.component';
 import { MydataComponent } from './mydata/mydata.component';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { MydataComponent } from './mydata/mydata.component';
     MydataComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,7 +5,7 @@
       <app-myform></app-myform>
     </div>
     <div class="col-md-6">
-      <app-mydata></app-mydata>
+      <app-mydata *ngFor="let element of juegos" [game]="element" nombre_usuario="Armando"></app-mydata>
     </div>
   </div>
 </div>
