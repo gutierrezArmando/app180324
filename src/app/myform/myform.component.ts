@@ -1,6 +1,4 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {isNumber, log} from 'util';
-import {isNumeric} from "tslint";
 
 @Component({
   selector: 'app-myform',
